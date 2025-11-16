@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+{% block content %}
+<p class="p-2">Bienvenido a las mejores peliculas del universo DC</p>
+<ul class="list-group">
+  {% for movie in movies %}
+  <li class="list-group-item">
+    <a href="{% url 'movie_details' movie.id %}"> {{ movie.title }} </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <title>Movies</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="p-4 text-center" style="background-color:#1A0B2E; color:#C084F5;">
+        <h1>Las mejores peliculas de DC</h1>
+    </div>
+    <p class="p-2">
+        Has elegido la pelicula {{ movie }}.
+    </p>
+    <h3>Detalle de Pelicula</h3>
+    <ul>
+    <li>Título: {{ movie.title }}</li>
+    <li>Año de estreno: {{ movie.release_year }}</li>
+    <li>Director: {{ movie.director_name }}</li>
+    <li>Género: {{ movie.genre }}</li>
+    <li>Sinopsis: {{ movie.synopsis }}</li>
+    </ul>
+  </body>
+</html>
+
+
