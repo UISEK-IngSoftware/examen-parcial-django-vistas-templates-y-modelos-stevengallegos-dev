@@ -5,7 +5,8 @@ class Movie(models.Model):
     release_year = models.PositiveIntegerField()            
     director_name = models.CharField(max_length=100)      
     genre = models.CharField(max_length=50)                
-    synopsis = models.TextField()                          
+    synopsis = models.TextField() 
+    picture = models.ImageField(upload_to='movies/', null=True, blank=True)                         
 
 
     def __str__(self):

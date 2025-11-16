@@ -1,11 +1,17 @@
-{% extends "base.html" %} 
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <p class="p-2">Bienvenido a las mejores peliculas del universo DC</p>
-<ul class="list-group">
+
+<div class="row">
   {% for movie in movies %}
-  <li class="list-group-item">
-    <a href="{% url 'movie_details' movie.id %}"> {{ movie.title }} </a>
-  </li>
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <div class="card" style="width: 18rem">
+      <img src="{{ movie.picture.url }}" class="card-img-top" alt="{{ movie.title }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.title }}</h5>
+        <a href="{% url 'movie_details' movie.id %}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
+      </div>
+    </div>
+  </div>
   {% endfor %}
-</ul>
+</div>
 {% endblock content %}
